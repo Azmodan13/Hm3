@@ -1,0 +1,20 @@
+.basket{
+    width: 50px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+.cercle {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 16px;
+    top: -21px;
+    font-weight: 700;
+}

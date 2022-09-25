@@ -1,0 +1,18 @@
+.Controls{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    text-align: center;
+    line-height: 18px;
+    background-color: rgb(165, 165, 165);
+    cursor: pointer;
+}
+
+.Controls:hover {
+    background-color: rgb(252, 119, 119);
+    color: #fff
+}

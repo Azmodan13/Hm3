@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import {useState} from 'react'
 import './App.css';
+// import Character from './Components/Character/Character';
+import Data from './Data/Data';
+import Basket from './Components/Basket/Basket';
+import Counter from './Components/Counter/Counter';
+import Wrapper from './Components/Wrapper/Wrapper';
 
 function App() {
+
+  const [data, setData] = useState()
+  const [trash, setTrash] = useState(0)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>  
+
+    <Counter/>
+    <Data setData={setData}/>
+
+    <Wrapper setData={setData} data={data} trash={trash} setTrash={setTrash}>
+      
+    {/* {data ? data.map((item)=> 
+    <Character key={item.id} item={item} setData={setData} data={data} trash={trash} setTrash={setTrash}/>    
+    ) : null} */}
+
+    </Wrapper>
+
+    <Basket trash={trash}/>
+    </>
   );
 }
 
