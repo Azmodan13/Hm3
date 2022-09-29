@@ -5,6 +5,7 @@ import Data from './Data/Data';
 import Basket from './Components/Basket/Basket';
 import Counter from './Components/Counter/Counter';
 import Wrapper from './Components/Wrapper/Wrapper';
+import Form from './Components/Form/Form';
 
 function App() {
 
@@ -17,14 +18,8 @@ function App() {
 
     <Counter/>
     <Data setData={setData}/>
-
-    <Wrapper setData={setData} data={data} trash={trash} setTrash={setTrash}>
-      
-    {/* {data ? data.map((item)=> 
-    <Character key={item.id} item={item} setData={setData} data={data} trash={trash} setTrash={setTrash}/>    
-    ) : null} */}
-
-    </Wrapper>
+    <Form/>
+    <Wrapper setData={setData} data={data} trash={trash} setTrash={setTrash}></Wrapper>
 
     <Basket trash={trash}/>
     </>
